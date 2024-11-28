@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.register.RegisterActivity"
+    android:background="@color/Primary">
+
+    <!-- CardView untuk menampilkan teks "Welcome", tetap di bawah -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="40dp"
+        android:layout_marginBottom="-25dp"
+        android:id="@+id/card_view"
+        android:backgroundTint="?attr/cardBackgroundColor">
+
+        <!-- LinearLayout di dalam CardView untuk menempatkan teks -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/username"
+                android:autofillHints="Name"
+                android:background="@drawable/rounded_border_inline"
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:hint="@string/enter_you_name"
+                android:fontFamily="@font/urlight"
+                android:drawableStart="@drawable/ic_name"
+                android:textColor="?attr/font_color"
+                android:drawablePadding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/email"
+                android:autofillHints="Email"
+                android:background="@drawable/rounded_border_inline"
+                android:layout_marginTop="20dp"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:hint="@string/email"
+                android:fontFamily="@font/urlight"
+                android:drawableStart="@drawable/baseline_alternate_email_24"
+                android:textColor="?attr/font_color"
+                android:drawablePadding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/password"
+                android:autofillHints="Email"
+                android:background="@drawable/rounded_border_inline"
+                android:layout_marginTop="20dp"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:fontFamily="@font/urlight"
+                android:hint="@string/password"
+                android:drawableStart="@drawable/ic_password"
+                android:textColor="?attr/font_color"
+                android:drawablePadding="10dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registrasi"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:fontFamily="@font/urbold"
+                android:textSize="16sp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sudah_ada_akun"
+                    android:textSize="17sp"
+                    android:textColor="?attr/font_color"
+                    android:fontFamily="@font/urmedium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textSize="17sp"
+                    android:textColor="#00BBFF"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/urbold"
+                    android:padding="4dp"
+                    android:onClick="onRegisterClick"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Basic">#E7F0F0</color>
+    <color name="Primary">#2EC4B6</color>
+    <color name="PrimaryVariant">#CBF3F0</color>
+    <color name="Secondary">#44A1A0</color>
+    <color name="SecondaryVariant">#78CDD7</color>
+    <color name="Tersier">#247B7B</color>
+    <color name="TersierVariant">#FFBF69</color>
+    <color name="OnTersier">#FF9F1C</color>
+    <color name="Error">#FF3434</color>
+    <color name="gray">#808080</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="darkGray">#27272a</color>
+
+
+    //chart
+    <color name="chart_background">#FFFFFF</color>
+    <color name="chart_text_color">#000000</color>
+    <color name="chart_bar_color">#44A1A0</color>
+
+
+</resources>

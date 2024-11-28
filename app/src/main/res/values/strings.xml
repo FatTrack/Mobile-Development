@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">FatTrack</string>
+    <string name="home">Home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="scan">Scan</string>
+    <string name="scan_button">Scan button</string>
+    <string name="dummy_name">My Name</string>
+    <string name="dummy_email">example@gmail.com</string>
+    <string name="dark_mode_logo">Dark Mode Logo</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="push_notification">Push Notification</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="notification_logo">notification_logo</string>
+    <string name="reset_logo">reset_logo</string>
+    <string name="logout_logo">logout_logo</string>
+
+
+    <!--    edit profile-->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profile_picture">Edit Profile Picture</string>
+    <string name="email_icon">Email Icon</string>
+    <string name="edit_email">Edit Email</string>
+    <string name="name_icon">Name Icon</string>
+    <string name="edit_nama">Edit Nama Lengkap</string>
+    <string name="btn_selesai">Selesai</string>
+    <string name="btn_cancel">Cancel</string>
+
+
+    <!--   article-->
+    <string name="article">Artikel</string>
+    <string name="articletitle">Artikel Rekomendasi</string>
+    <string name="title">title</string>
+    <string name="name">name</string>
+    <string name="date">date</string>
+    <string name="description">description</string>
+    <string name="to_login">To Login</string>
+    <string name="login_title">Silahkan Login\nKe Akun Kamu</string>
+    <string name="email">Enter you Email</string>
+    <string name="password">Enter you Password</string>
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="login">Login</string>
+    <string name="or">Or</string>
+    <string name="google">Google</string>
+    <string name="belum_ada_akun">Belum ada akun?</string>
+    <string name="registrasi">Register</string>
+    <string name="register_title">Belum ada akun?\nBuat akun dulu yuk</string>
+    <string name="sudah_ada_akun">Sudah ada akun?</string>
+    <string name="enter_you_name">Enter you Name</string>
+
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="dummy_tgl">Rabu, 15 Oktober 2024</string>
+    <string name="kalori_logo">kalori_logo</string>
+    <string name="dummy_kalori">0 kcal</string>
+    <string name="riwayat_cek_kalori">Riwayat Cek Kalori</string>
+    <string name="dummy_makanan_name">Nasi Goreng</string>
+    <string name="riwayat_kalori_per_hari">Riwayat Kalori Per Hari</string>
+
+    <string name="forgot_password">Lupa\nPassword?</string>
+    <string name="desc_forgot">Masukkan Email yang kamu daftarkan\nuntuk reset Password</string>
+    <string name="btn_continue">Continue</string>
+    <string name="verifikasi_code">Verifikasi Code</string>
+    <string name="tolong_check_email_kamu">Tolong check email kamu</string>
+    <string name="label">-</string>
+    <string name="verify">Verify</string>
+    <string name="confirm">Password harus berbeda dari sebelumnya</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="foto_profil">Foto Profil</string>
+    <string name="dummy_hello">Halo Mustika,</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="target_harian">Target Harian</string>
+    <string name="zero">0</string>
+    <string name="target_kal">/325 kal</string>
+    <string name="masukkan_target_harian_dalam_kalori">Masukkan Target harian dalam kalori</string>
+    <string name="button_set">Set</string>
+    <string name="tracking_protein_lemak_karbo_harian">Tracking Protein, Lemak, Karbo harian</string>
+    <string name="rabu_15_oktober_2024">Rabu, 15 Oktober 2024</string>
+    <string name="protein">Protein</string>
+    <string name="gram">gram</string>
+    <string name="lemak">Lemak</string>
+    <string name="karbohidrat">Karbohidrat</string>
+    <string name="artikel">Artikel</string>
+    <string name="handler">Handler</string>
+    <string name="title_sheet">Nasi Goreng</string>
+    <string name="dummy_text">Nasi goreng adalah makanan berupa nasi\nyang digoreng dan dicampur dalam minyak\ngoreng, margarin, atau mentega.</string>
+    <string name="dummy_sheet">65g</string>
+    <string name="carbo">Carbo</string>
+
+    <string-array name="data_title">
+        <item>10 Manfaat Minum Air Putih untuk Kesehatan</item>
+        <item>Makanan Sehat yang Meningkatkan Sistem Imun</item>
+        <item>Tips Menjaga Berat Badan Ideal dengan Pola Makan</item>
+        <item>Makanan yang Harus Dihindari untuk Kesehatan Jantung</item>
+        <item>Manfaat Konsumsi Sayur dan Buah Setiap Hari</item>
+    </string-array>
+
+    <string-array name="data_author">
+        <item>Dr. Anita Kusuma</item>
+        <item>Andi Prasetyo, S.Gz</item>
+        <item>Dr. Rani Kurnia</item>
+        <item>Prof. Budi Santoso</item>
+        <item>Lisa Ananda, S.Gz</item>
+    </string-array>
+
+    <string-array name="data_date">
+        <item>2024 November 10</item>
+        <item>2024 November 11</item>
+        <item>2024 November 12</item>
+        <item>2024 November 13</item>
+        <item>2024 November 14</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Air putih memiliki banyak manfaat bagi tubuh, mulai dari menjaga hidrasi hingga meningkatkan metabolisme. Artikel ini akan membahas 10 manfaat penting air putih untuk kesehatan Anda.</item>
+        <item>Sistem imun yang kuat dapat membantu melawan penyakit. Artikel ini membahas jenis makanan yang kaya akan vitamin dan mineral untuk meningkatkan daya tahan tubuh.</item>
+        <item>Menjaga berat badan ideal memerlukan keseimbangan antara pola makan dan aktivitas fisik. Dalam artikel ini, temukan tips praktis untuk mengatur pola makan yang sehat.</item>
+        <item>Makanan tinggi lemak jenuh dan gula dapat merusak kesehatan jantung Anda. Artikel ini membahas makanan yang sebaiknya Anda hindari untuk menjaga kesehatan jantung.</item>
+        <item>Konsumsi sayur dan buah secara rutin memberikan banyak manfaat, termasuk meningkatkan pencernaan dan mencegah penyakit. Pelajari lebih lanjut dalam artikel ini.</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>https://bunda.co.id/wp-content/uploads/2022/03/Bunda-43-e1672666971487.jpg.webp</item>
+        <item>https://bunda.co.id/wp-content/uploads/2021/12/Medical-Check-Up-Berkala-untuk-Kesehatan-Anda-RS-Bunda-Group-e1672654412510.jpg.webp</item>
+        <item>https://bunda.co.id/wp-content/uploads/2022/06/senam-hamil-RSIA-Bunda-Jakarta-e1672631094881.jpeg.webp</item>
+        <item>https://cdn0-production-images-kly.akamaized.net/yuypGi501Xh2RxfXg0FMezMOB-g=/200x200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4978254/original/004426900_1729731635-IMG_0675.jpeg</item>
+        <item>https://bunda.co.id/wp-content/uploads/2022/04/Bunda-83-e1672648360426.jpg</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hasil_scan">Hasil Scan</string>
+    <string name="kalori">Kalori</string>
+</resources>

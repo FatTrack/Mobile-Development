@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.forgotpassword.ForgotActivity"
+    tools:ignore="UseCompoundDrawables">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/urbold"
+        android:textColor="?attr/font_color"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/desc_forgot"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/urmedium"
+        android:textColor="?attr/font_color"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/email"
+        android:autofillHints="Email"
+        android:background="@drawable/rounded_border_inline"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_margin="30dp"
+        android:hint="@string/email"
+        android:fontFamily="@font/urlight"
+        android:drawableStart="@drawable/baseline_alternate_email_24"
+        android:textColor="?attr/font_color"
+        android:drawablePadding="10dp"/>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:text="@string/btn_continue"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/urbold" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Error"
+        android:text="@string/btn_cancel"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/urbold"/>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/notifications_container"
+    android:layout_marginTop="10dp"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back and Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Back Icon -->
+            <ImageView
+                android:id="@+id/back_button"
+                android:clickable="true"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:focusable="true"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="Back"
+                android:layout_gravity="center_vertical" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Notification"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/font_color"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <!-- Notification Cards -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_variant"
+            android:text="ayo cek kalori kamu sekarang!"
+            android:textSize="14sp"
+            android:textColor="?attr/font_color"
+            android:elevation="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_variant"
+            android:text="Tantang diri kamu untuk batasin kalori"
+            android:textSize="14sp"
+            android:textColor="?attr/font_color"
+            android:elevation="2dp" />
+
+        <!-- Tambahkan notifikasi lainnya sesuai kebutuhan -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_variant"
+            android:text="Notifikasi lainnya..."
+            android:textSize="14sp"
+            android:textColor="?attr/font_color"
+            android:elevation="2dp" />
+    </LinearLayout>
+</ScrollView>
