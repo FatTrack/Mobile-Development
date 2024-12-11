@@ -9,7 +9,7 @@
     <string name="dummy_email">example@gmail.com</string>
     <string name="dark_mode_logo">Dark Mode Logo</string>
     <string name="dark_mode">Dark Mode</string>
-    <string name="push_notification">Push Notification</string>
+    <string name="push_notification">Calorie Check Reminder</string>
     <string name="reset_password">Reset Password</string>
     <string name="log_out">Log Out</string>
     <string name="notification_logo">notification_logo</string>
@@ -49,8 +49,8 @@
     <string name="sudah_ada_akun">Sudah ada akun?</string>
     <string name="enter_you_name">Enter you Name</string>
 
-    <string name="week">Week</string>
-    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="weekly">Weekly</string>
     <string name="dummy_tgl">Rabu, 15 Oktober 2024</string>
     <string name="kalori_logo">kalori_logo</string>
     <string name="dummy_kalori">0 kcal</string>
@@ -65,7 +65,7 @@
     <string name="tolong_check_email_kamu">Tolong check email kamu</string>
     <string name="label">-</string>
     <string name="verify">Verify</string>
-    <string name="confirm">Password harus berbeda dari sebelumnya</string>
+    <string name="confirm">Link Reset Password telah dikirim ke Email Anda. Belum menerima email? klik tombol dibawah!</string>
     <string name="enter_new_password">Enter new password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="foto_profil">Foto Profil</string>
@@ -73,13 +73,14 @@
     <string name="selamat_datang">Selamat Datang</string>
     <string name="target_harian">Target Harian</string>
     <string name="zero">0</string>
+    <string name="ten">10</string>
     <string name="target_kal">/325 kal</string>
     <string name="masukkan_target_harian_dalam_kalori">Masukkan Target harian dalam kalori</string>
     <string name="button_set">Set</string>
     <string name="tracking_protein_lemak_karbo_harian">Tracking Protein, Lemak, Karbo harian</string>
     <string name="rabu_15_oktober_2024">Rabu, 15 Oktober 2024</string>
     <string name="protein">Protein</string>
-    <string name="gram">gram</string>
+    <string name="gram"> gram</string>
     <string name="lemak">Lemak</string>
     <string name="karbohidrat">Karbohidrat</string>
     <string name="artikel">Artikel</string>
@@ -130,6 +131,26 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hasil_scan">Hasil Scan</string>
+    <string name="hasil_scan">Scan Result</string>
     <string name="kalori">Kalori</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="time">time</string>
+    <string name="cover_image">cover image</string>
+    <string name="pilih_predict_calori">Pilih Predict Calori</string>
+    <string name="camera">Camera</string>
+    <string name="predict_by_text">Predict By Text</string>
+    <string name="makanan_yang_ingin_kamu_cek_kalori">Makanan yang ingin kamu cek kalori</string>
+    <string name="nama_makanan">nama makanan</string>
+    <string name="cek_kalori_makanan">Cek Kalori Makanan</string>
+    <string name="email_label">Email:</string>
+    <string name="fullname_label">FullName:</string>
+    <string name="dummy_clock">00.00 WIB</string>
+    <string name="fattrack_bot">FatTrack Bot</string>
+    <string name="status_chat">Online</string>
+    <string name="chat_halo">Halo! Makanan apa yang ingin kamu cari?</string>
+    <string name="ketik_pesan">Ketik pesan</string>
+    <string name="send">Send</string>
+    <string name="do_you_want_to_log_out">Do you want to Log Out?</string>
+    <string name="send_again">SEND AGAIN</string>
+    <string name="tidak_ada_notifikasi">Tidak ada notifikasi</string>
 </resources>

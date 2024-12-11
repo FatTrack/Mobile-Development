@@ -1,38 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img_background"
     tools:context=".view.scan.ResultActivity">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/hasil_scan"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/urbold"
-        app:layout_constraintBottom_toTopOf="@id/previewImageView"
-        android:padding="12dp"
-        android:textColor="?attr/font_color"/>
-
-    <!--        ini adalah gambar-->
-    <ImageView
-        android:id="@+id/previewImageView"
-        android:layout_width="match_parent"
+    <!-- CardView berbentuk ponsel -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phoneCard"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        app:cardElevation="16dp"
+        app:cardCornerRadius="32dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@id/tv"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
 
+        <!-- LinearLayout for phone -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- card area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- image -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imageCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    android:layout_margin="0dp"
+                    android:clipChildren="true"
+                    android:clipToPadding="true"
+                    tools:ignore="NestedWeights">
+
+                    <ImageView
+                        android:id="@+id/preview_image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/image_preview"
+                        tools:srcCompat="@tools:sample/avatars" />
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- buttons -->
+                <LinearLayout
+                    android:id="@+id/buttonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="8dp">
+
+                    <!-- Scan -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_scan"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/scan"
+                        android:icon="@drawable/ic_upload"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="12dp"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="?attr/colorOnPrimary" />
+
+                    <!-- Cancel -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_cancel"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/btn_cancel"
+                        android:textColor="?attr/colorError"
+                        app:cornerRadius="12dp"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="?attr/colorError" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <!-- Border (View) -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/lightGray" />
+
+            <!-- phone nav -->
+            <LinearLayout
+                android:id="@+id/virtualButtons"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Tombol Back -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights">
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="@drawable/ic_arrow_back"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="@string/btn_cancel" />
+                </LinearLayout>
+
+                <!-- Tombol Home -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                <ImageView
+                    android:id="@+id/btn_home"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="@drawable/baseline_home"
+                    android:contentDescription="@string/btn_cancel" />
+                </LinearLayout>
+
+                <!-- Tombol Recent -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                <ImageView
+                    android:id="@+id/btn_recent"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="@drawable/ic_recent"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="@string/btn_cancel" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

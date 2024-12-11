@@ -1,4 +1,4 @@
-package com.example.fattrack.data
+package com.example.fattrack.data.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

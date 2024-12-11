@@ -18,6 +18,7 @@ class RegisterViewModel(private val authRepository: AuthRepository) : ViewModel(
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
+
     //register
     suspend fun register(email: String, nama: String, password: String) {
         _isLoading.value = true
@@ -25,9 +26,8 @@ class RegisterViewModel(private val authRepository: AuthRepository) : ViewModel(
         try {
             val response = authRepository.register(email, nama, password)
             _registerResponse.value = response
-            Log.d("RegisterViewModelTest", "Register response: $response")
         } catch (e: Exception) {
-            _errorMessages.value = e.message
+            _errorMessages.value = "Something went wrong. Please try again later!"
         } finally {
             _isLoading.value = false
         }

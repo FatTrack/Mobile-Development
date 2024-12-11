@@ -1,4 +1,4 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,23 +18,28 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginEnd="12dp"
-                android:contentDescription="@string/foto_profil"
-                android:src="@drawable/circle_background" />
 
-            <LinearLayout
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@drawable/circle_background"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/foto_profil" />
+
+        <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
 
                 <TextView
+                    android:id="@+id/user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dummy_hello"
+                    tools:text="Halo, "
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="?attr/font_color" />
@@ -44,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/selamat_datang"
                     android:textSize="14sp"
-                    android:textColor="@color/gray" />
+                    android:textColor="?attr/font_color" />
             </LinearLayout>
 
             <ImageView
@@ -75,11 +80,12 @@
 
 
             <LinearLayout
+                android:id="@+id/card_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/rounded_border_inline"
-                android:padding="16dp">
+                android:padding="4dp">
 
                 <!-- LinearLayout for the value and PieChart -->
                 <LinearLayout
@@ -99,7 +105,7 @@
 
                         <!-- TextView for the current value (210) -->
                         <TextView
-                            android:id="@+id/target_value"
+                            android:id="@+id/total_kalori"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/zero"
@@ -111,9 +117,10 @@
 
                         <!-- TextView for the description "/325 kal" -->
                         <TextView
+                            android:id="@+id/target_value"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/target_kal"
+                            tools:text="/2100Kcal"
                             android:textSize="20sp"
                             android:textColor="@color/Primary"
                             android:fontFamily="sans-serif-medium"
@@ -124,41 +131,13 @@
                     <!-- PieChart aligned to the right -->
                     <com.github.mikephil.charting.charts.PieChart
                         android:id="@+id/target_pie_chart"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="end"
                         android:layout_marginStart="16dp" />
                 </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <!-- EditText for target input -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/masukkan_target_harian_dalam_kalori"
-                        android:textSize="12sp"
-                        android:layout_marginEnd="8dp"/>
-
-                    <!-- Button for setting the target -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/button_set"
-                        android:textStyle="bold"
-                        android:textSize="12sp"
-                        android:layout_gravity="end"
-                        android:paddingVertical="6dp"
-                        android:paddingHorizontal="12dp"
-                        android:background="@drawable/rounded_button"
-                        android:textColor="?attr/font_color" />
-
-                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -173,10 +152,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/text_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rabu_15_oktober_2024"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            android:textColor="?attr/font_color"/>
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -217,7 +197,7 @@
                         android:gravity="center_vertical"
                         tools:ignore="UseCompoundDrawables">
 
-                        <!-- Ikon Kalori -->
+                        <!-- Ikon protein -->
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
@@ -228,9 +208,10 @@
 
                         <!-- Teks Kalori -->
                         <TextView
+                            android:id="@+id/total_protein"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/zero"
+                            tools:text="0"
                             android:textSize="20sp"
                             android:textColor="?attr/font_color"
                             android:fontFamily="sans-serif-medium" />
@@ -280,9 +261,10 @@
 
                         <!-- Teks Lemak -->
                         <TextView
+                            android:id="@+id/total_lemak"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/zero"
+                            tools:text="0"
                             android:textSize="20sp"
                             android:textColor="?attr/font_color"
                             android:fontFamily="sans-serif-medium" />
@@ -324,7 +306,7 @@
                         android:gravity="center_vertical"
                         tools:ignore="UseCompoundDrawables">
 
-                        <!-- Ikon Kalori -->
+                        <!-- Ikon karbo -->
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
@@ -334,6 +316,7 @@
                             android:layout_marginEnd="8dp" />
 
                         <TextView
+                            android:id="@+id/total_karbohidrat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/zero"
@@ -369,11 +352,5 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/btn_tologin"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/login" />
-
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

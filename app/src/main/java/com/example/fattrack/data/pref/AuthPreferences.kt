@@ -18,6 +18,7 @@ val Context.authSession: DataStore<Preferences> by preferencesDataStore(name = "
 class AuthPreferences private constructor(private val dataStore: DataStore<Preferences>) {
     companion object {
         private val ID_USER_KEY = stringPreferencesKey("idUser")
+        private val TOKEN = stringPreferencesKey("token")
         private val EMAIL_KEY = stringPreferencesKey("email")
         private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
 
@@ -38,6 +39,7 @@ class AuthPreferences private constructor(private val dataStore: DataStore<Prefe
     suspend fun saveSession(user: SessionModel) {
         dataStore.edit { preferences ->
             preferences[ID_USER_KEY] = user.idUser
+            preferences[TOKEN] = user.token
             preferences[EMAIL_KEY] = user.email
             preferences[IS_LOGIN_KEY] = true
         }
@@ -49,10 +51,11 @@ class AuthPreferences private constructor(private val dataStore: DataStore<Prefe
     fun getSession(): Flow<SessionModel> {
         return dataStore.data.map { preferences ->
             val idUser = preferences[ID_USER_KEY] ?: ""
+            val token = preferences[TOKEN] ?: ""
             val email = preferences[EMAIL_KEY] ?: ""
             val isLogin = preferences[IS_LOGIN_KEY] ?: false
 
-            SessionModel(idUser, email, isLogin)
+            SessionModel(idUser, token, email, isLogin)
         }
 
 

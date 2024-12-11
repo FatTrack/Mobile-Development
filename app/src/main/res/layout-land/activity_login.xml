@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:cardCornerRadius="40dp"
-        android:layout_marginBottom="-25dp"
+        android:layout_marginBottom="-30dp"
         android:id="@+id/card_view"
         android:backgroundTint="?attr/cardBackgroundColor">
 
@@ -27,30 +27,28 @@
             android:gravity="center">
 
 
-            <EditText
+            <com.example.fattrack.view.custom.EmailCustom
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/username"
+                android:id="@+id/ed_login_email"
                 android:autofillHints="Email"
                 android:background="@drawable/rounded_border_inline"
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
                 android:hint="@string/email"
-                android:fontFamily="@font/urlight"
                 android:drawableStart="@drawable/baseline_alternate_email_24"
                 android:textColor="?attr/font_color"
                 android:drawablePadding="10dp"/>
 
-            <EditText
+            <com.example.fattrack.view.custom.PasswordCustom
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/password"
+                android:id="@+id/ed_login_password"
                 android:autofillHints="Email"
                 android:background="@drawable/rounded_border_inline"
                 android:layout_marginTop="20dp"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:fontFamily="@font/urlight"
                 android:hint="@string/password"
                 android:drawableStart="@drawable/ic_password"
                 android:textColor="?attr/font_color"
@@ -65,7 +63,6 @@
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="@font/urbold"
                 android:textColor="?attr/font_color"
                 android:onClick="onForgotClick"/>
 
@@ -77,8 +74,8 @@
                 android:text="@string/login"
                 android:textStyle="bold"
                 android:padding="10dp"
-                android:fontFamily="@font/urbold"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -96,13 +93,13 @@
                 app:icon="@drawable/google"
                 app:iconGravity="textStart"
                 app:iconTint="@null"
+                android:textColor="@color/white"
                 android:drawableTint="@color/Primary"
                 app:iconPadding="10dp"
                 app:iconSize="24dp"
                 android:text="@string/google"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:fontFamily="@font/urbold"
                 android:textSize="16sp"/>
 
             <LinearLayout
@@ -117,9 +114,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/belum_ada_akun"
                     android:textSize="17sp"
-                    android:textColor="?attr/font_color"
-                    android:fontFamily="@font/urmedium" />
-
+                    android:textColor="?attr/font_color" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -128,7 +123,6 @@
                     android:textColor="#00BBFF"
                     android:clickable="true"
                     android:focusable="true"
-                    android:fontFamily="@font/urbold"
                     android:padding="4dp"
                     android:onClick="onRegisterClick"
 

@@ -28,9 +28,8 @@ class LoginViewModel(private val authRepository: AuthRepository) : ViewModel() {
         try {
             val response = authRepository.login(email, password)
             _loginResponse.value = response
-            Log.d("RegisterViewModelTest", "Login response: $response")
         } catch (e: Exception) {
-            _errorMessages.value = e.message
+            _errorMessages.value = "Something went wrong. Please try again later!"
         } finally {
             _isLoading.value = false
         }

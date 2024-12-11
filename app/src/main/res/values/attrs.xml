@@ -5,4 +5,5 @@
     <attr name="font_color" format="color" />
     <attr name="cardBackgroundColor" format="color" />
     <attr name="cardBackgroundVariant" format="color" />
+    <attr name="cardBackgroundDisabled" format="color" />
 </resources>

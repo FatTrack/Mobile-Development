@@ -17,15 +17,17 @@
 
         <!-- TextView untuk judul login -->
         <TextView
+            android:id="@+id/title_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/register_title"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:fontFamily="@font/urbold"
             android:textSize="40sp"
             android:layout_marginBottom="20dp"
-            android:textColor="?attr/font_color"/>
+            android:textColor="?attr/font_color"
+            android:alpha="0"
+            tools:alpha="100"/>
 
     </LinearLayout>
 
@@ -35,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:cardCornerRadius="40dp"
-        android:layout_marginBottom="-25dp"
+        android:layout_marginBottom="-28dp"
         android:id="@+id/card_view"
         android:backgroundTint="?attr/cardBackgroundColor">
 
@@ -47,14 +49,19 @@
             android:padding="28dp"
             android:gravity="center">
 
-            <TextView
+            <ImageView
+                android:id="@+id/iv_logo_register"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textColor="@color/black"
                 android:textSize="32sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/logo_fatrack"
+                android:alpha="0"
+                tools:alpha="100"/>
 
-            <EditText
+            <com.example.fattrack.view.custom.NameCustom
                 android:id="@+id/ed_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -64,12 +71,13 @@
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:hint="@string/enter_you_name"
-                android:fontFamily="@font/urlight"
                 android:drawableStart="@drawable/ic_name"
                 android:textColor="?attr/font_color"
-                android:drawablePadding="10dp"/>
+                android:drawablePadding="10dp"
+                android:alpha="0"
+                tools:alpha="100"/>
 
-            <EditText
+            <com.example.fattrack.view.custom.EmailCustom
                 android:id="@+id/ed_email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -79,12 +87,13 @@
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
                 android:hint="@string/email"
-                android:fontFamily="@font/urlight"
                 android:drawableStart="@drawable/baseline_alternate_email_24"
                 android:textColor="?attr/font_color"
-                android:drawablePadding="10dp"/>
+                android:drawablePadding="10dp"
+                android:alpha="0"
+                tools:alpha="100"/>
 
-            <EditText
+            <com.example.fattrack.view.custom.PasswordCustom
                 android:id="@+id/ed_password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -93,25 +102,20 @@
                 android:layout_marginTop="20dp"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:fontFamily="@font/urlight"
                 android:hint="@string/password"
                 android:drawableStart="@drawable/ic_password"
                 android:textColor="?attr/font_color"
-                android:drawablePadding="10dp"/>
+                android:drawablePadding="10dp"
+                android:alpha="0"
+                tools:alpha="100"/>
+
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold"/>
-
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/btn_register"
@@ -120,8 +124,10 @@
                 android:text="@string/registrasi"
                 android:textStyle="bold"
                 android:padding="10dp"
-                android:fontFamily="@font/urbold"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:alpha="0"
+                tools:alpha="100"/>
 
 
             <LinearLayout
@@ -133,14 +139,17 @@
                 android:layout_marginTop="10dp">
 
                 <TextView
+                    android:id="@+id/have_acoount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/sudah_ada_akun"
                     android:textSize="17sp"
                     android:textColor="?attr/font_color"
-                    android:fontFamily="@font/urmedium" />
+                    android:alpha="0"
+                    tools:alpha="100"/>
 
                 <TextView
+                    android:id="@+id/to_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/login"
@@ -149,14 +158,14 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:textStyle="bold"
-                    android:fontFamily="@font/urbold"
                     android:padding="4dp"
                     android:onClick="onLoginClick"
+                    android:alpha="0"
+                    tools:alpha="100"
                     />
             </LinearLayout>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>

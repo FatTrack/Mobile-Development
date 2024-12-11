@@ -32,5 +32,8 @@ data class DataItem(
 	val id: String? = null,
 
 	@field:SerializedName("title")
-	val title: String? = null
+	val title: String? = null,
+
+	@field:SerializedName("message")
+	val message: String? = null
 )

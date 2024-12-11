@@ -3,6 +3,7 @@ package com.example.fattrack.data.repositories
 import com.example.fattrack.data.pref.AuthPreferences
 import com.example.fattrack.data.services.responses.ResponseLogin
 import com.example.fattrack.data.services.responses.ResponseRegister
+import com.example.fattrack.data.services.responses.ResponseResetPassword
 import com.example.fattrack.data.services.retrofit.ApiService
 import kotlinx.coroutines.flow.Flow
 
@@ -60,12 +61,38 @@ class AuthRepository (private val apiService: ApiService, private val authPrefer
             } else {
                 // Log error
                 val errorMessage = response.errorBody()?.string() ?: "Unknown error"
-                Result.failure(Exception("Articles Error with code: ${response.code()}, message: $errorMessage"))
+                Result.failure(Exception("error: $errorMessage"))
             }
         } catch (e: Exception) {
             Result.failure(e)
         }
     }
+
+
+    //reset pass
+    suspend fun forgotPassword(email: String) : Result<ResponseResetPassword> {
+        return try {
+            // call API
+            val response = apiService.forgotPassword(email)
+
+            if (response.isSuccessful) {
+                val body = response.body()
+                if (body != null) {
+                    Result.success(body)
+                } else {
+                    Result.failure(Exception("Response body is null"))
+                }
+            } else {
+                // Log error
+                val errorMessage = response.errorBody()?.string() ?: "Unknown error"
+                Result.failure(Exception("Error: $errorMessage"))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+
 
     // Save session
     suspend fun saveSession(user: SessionModel) {

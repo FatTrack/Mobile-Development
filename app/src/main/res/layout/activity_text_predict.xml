@@ -1,0 +1,129 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0"
+    tools:context=".view.text.TextPredictActivity">
+
+    <!-- Header Chat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/Primary"
+        android:elevation="4dp">
+
+        <!-- Ikon Chatbot -->
+        <ImageView
+            android:id="@+id/chatbotIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_chatbot"
+            android:contentDescription="@string/fattrack_bot"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"/>
+
+        <!-- Informasi Chat -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nama Chatbot -->
+            <TextView
+                android:id="@+id/chatbotName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fattrack_bot"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Status Online -->
+            <TextView
+                android:id="@+id/chatbotStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_chat"
+                android:textColor="#E0E0E0"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- Daftar Chat -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <!-- Contoh Pesan dari Pihak Kedua -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="@drawable/chat_bubble_other"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="60dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat_halo"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Input Chat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="8dp">
+
+        <!-- EditText untuk Input Pesan -->
+        <EditText
+            android:id="@+id/inputMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/ketik_pesan"
+            android:textColorHint="@color/black"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <!-- Tombol Kirim -->
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_send"
+            android:contentDescription="@string/send"
+            android:padding="10dp"
+            app:tint="#009688" />
+    </LinearLayout>
+
+</LinearLayout>

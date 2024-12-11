@@ -8,7 +8,7 @@ data class ResponseScanImage(
 	val code: Int? = null,
 
 	@field:SerializedName("data")
-	val data: Data? = null,
+	val data: PredictData? = null,
 
 	@field:SerializedName("status")
 	val status: String? = null
@@ -32,10 +32,13 @@ data class NutritionalInfo(
 	val deskripsi: String? = null,
 
 	@field:SerializedName("lemak")
-	val lemak: Any? = null
+	val lemak: Any? = null,
+
+	@field:SerializedName("image")
+	val image: String? = null
 )
 
-data class Data(
+data class PredictData(
 
 	@field:SerializedName("nutritional_info")
 	val nutritionalInfo: NutritionalInfo? = null,
@@ -50,5 +53,9 @@ data class Data(
 	val predictedClass: String? = null,
 
 	@field:SerializedName("confidence")
-	val confidence: Any? = null
+	val confidence: Any? = null,
+
+	//if error message
+	@field:SerializedName("message")
+	val message: String? = null
 )

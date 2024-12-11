@@ -195,7 +195,7 @@ class CameraActivity : AppCompatActivity() {
         if (uri != null) {
             goToResultActivity(uri)
         } else {
-            Log.d("Photo Picker", "No media selected")
+            showToast("No media selected")
         }
     }
 
@@ -203,7 +203,6 @@ class CameraActivity : AppCompatActivity() {
     private fun goToResultActivity(imageUri: Uri) {
         val intent = Intent(this, ResultActivity::class.java).apply {
             putExtra("image_uri", imageUri.toString())
-            putExtra("SHOW_BOTTOM_SHEET", true)
         }
         startActivity(intent)
     }

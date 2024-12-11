@@ -39,41 +39,33 @@
                 android:textStyle="bold"
                 android:textColor="?attr/font_color"
                 android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/delete_notification"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_delete_24"
+                android:layout_gravity="end"
+                android:layout_marginStart="200dp"/>
         </LinearLayout>
 
-        <!-- Notification Cards -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/card_variant"
-            android:text="ayo cek kalori kamu sekarang!"
-            android:textSize="14sp"
-            android:textColor="?attr/font_color"
-            android:elevation="2dp" />
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_notification"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
 
         <TextView
+            android:id="@+id/tvEmptyNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/card_variant"
-            android:text="Tantang diri kamu untuk batasin kalori"
-            android:textSize="14sp"
+            android:text="@string/tidak_ada_notifikasi"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
             android:textColor="?attr/font_color"
-            android:elevation="2dp" />
+            />
 
-        <!-- Tambahkan notifikasi lainnya sesuai kebutuhan -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/card_variant"
-            android:text="Notifikasi lainnya..."
-            android:textSize="14sp"
-            android:textColor="?attr/font_color"
-            android:elevation="2dp" />
     </LinearLayout>
 </ScrollView>
