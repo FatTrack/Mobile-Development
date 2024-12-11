@@ -6,8 +6,8 @@
 `Fat Track`  is a mobile application designed to help users track their calorie and nutrient intake by analyzing food images. With the help of AI and image processing technology, users can take pictures of their meals and instantly receive nutritional information such as calorie counts. The app aims to promote healthier eating habits, raise awareness about balanced nutrition, and improve overall well-being, particularly in Indonesia, where awareness of proper nutrition is often limited.
 ## 👥Mobile Team
 
-- Muhammad Bobby- [Github@MuhammadBobby](https://www.github.com/MuhammadBobby)-Mobile Development(`MD-35`)
-- Auliya Ikhsana Nasution-[Github@AuliyaIkhsanaNasution](https://www.github.com/AuliyaIkhsanaNasution)-Mobile Development(`MD-44`)
+- Muhammad Bobby- [Github@MuhammadBobby](https://www.github.com/MuhammadBobby)-Mobile Development(`MD-35`)-Politeknik Negeri Medan
+- Auliya Ikhsana Nasution-[Github@AuliyaIkhsanaNasution](https://www.github.com/AuliyaIkhsanaNasution)-Mobile Development(`MD-44`)-Politeknik Negeri Medan
 
 ## 📸 App Features
 
